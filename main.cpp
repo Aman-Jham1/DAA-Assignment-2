@@ -1,3 +1,17 @@
+/**
+ * @file main.cpp
+ * @author Aman Jham
+ * @author Jay Patel
+ * @author Kruti Baraiya
+ * @author Zaeem Ansari
+ * @brief Given an RNA molecule, predict its secondary structure.
+ * @version 0.1
+ * @date 2022-04-17
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <bits/stdc++.h>
 #include "RNA.hpp"
 
@@ -28,20 +42,40 @@ int32_t main() {
   freopen("./Test/input.txt", "r", stdin);
   freopen("./Test/output.txt", "w", stdout);
 
+  /**
+   * @brief input RNA molecule.
+   * 
+   */
   string rnaMolecule;
   cin >> rnaMolecule;
+
+  /**
+   * @brief instantiate the object.
+   * 
+   */
+
   RNA rna(rnaMolecule);
 
   Timer timer("Calling RNA secondary structure prediction algorithm");
 
-  
+  /**
+   * @brief Calling top down method to find the optimum pairings.
+   * 
+   */
   int ans_top = rna.solve_top_down();
   //int ans_bottom = rna.solve_bottom_up();
   this_thread::sleep_for(chrono::milliseconds(100));
 
   cout << ans_top << '\n';
-  rna.find_path();
-  for (auto [i, j] : rna.path) {
+
+  rna.find_pairings();
+
+  /**
+   * @brief Printing the optimal pairs.
+   * 
+   */
+
+  for (auto [i, j] : rna.pairs) {
       cout << i + 1 << " " << j + 1 << '\n';
   }
   return 0;
