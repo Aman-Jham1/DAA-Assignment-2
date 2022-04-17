@@ -357,4 +357,4 @@
 963 973
 965 972
 966 971
-@Calling RNA secondary structure prediction algorithm> 40332.3 ms
+@Calling RNA secondary structure prediction algorithm> 15979 ms

@@ -81,17 +81,17 @@ public:
 
     void find_pairings(int i, int j) {
         if (j - i < 5) return;
-        int res = f(i, j);
-        if (res == f(i + 1, j)) {
+        int res = recurse(i, j);
+        if (res == recurse(i + 1, j)) {
             find_pairings(i + 1, j);
             return;
         }
-        if (res == f(i, j - 1)) {
+        if (res == recurse(i, j - 1)) {
             find_pairings(i, j - 1);
             return;
         }
         for (int t = i + 5; t <= j; ++t) {
-            if (match[rna[i]] == rna[t] and res == 1 + f(i + 1, t - 1) + f(t + 1, j)) {
+            if (match[rna[i]] == rna[t] and res == 1 + recurse(i + 1, t - 1) + recurse(t + 1, j)) {
                 pairs.push_back({i, t});
                 find_pairings(i + 1, t - 1);
                 find_pairings(t + 1, j);
