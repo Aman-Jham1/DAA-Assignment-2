@@ -1,0 +1,60 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Given an \mbox{\hyperlink{class_r_n_a}{R\+NA}} molecule, predict its secondary structure.  
+
+
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}R\+N\+A.\+hpp\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_timer}{Timer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{main_8cpp_a196718f834091385d38586a0ce4009dc}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Given an \mbox{\hyperlink{class_r_n_a}{R\+NA}} molecule, predict its secondary structure. 
+
+\begin{DoxyAuthor}{Author}
+Aman Jham 
+
+Jay Patel 
+
+Kruti Baraiya 
+
+Zaeem Ansari 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/04-\/17
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a196718f834091385d38586a0ce4009dc}\label{main_8cpp_a196718f834091385d38586a0ce4009dc}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int32\+\_\+t main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+input \mbox{\hyperlink{class_r_n_a}{R\+NA}} molecule.
+
+instantiate the object.
+
+Calling top down method to find the optimum pairings.
+
+Printing the optimal pairs.

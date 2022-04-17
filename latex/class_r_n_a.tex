@@ -1,0 +1,138 @@
+\hypertarget{class_r_n_a}{}\doxysection{R\+NA Class Reference}
+\label{class_r_n_a}\index{RNA@{RNA}}
+
+
+\mbox{\hyperlink{class_r_n_a}{R\+NA}} class.  
+
+
+
+
+{\ttfamily \#include $<$R\+N\+A.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_n_a_af54a757b9fbae607dfa82bc2b8e3d1a1}{R\+NA}} (string S)
+\begin{DoxyCompactList}\small\item\em will store the optimal result. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_n_a_a4c99f5f628ec902d395d49716f6f19f3}{recurse}} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Will be used in top down dp to calculate result for substring rna(i.......j) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_n_a_af10846d4a7a36b45bc6b09d934882d72}{solve\+\_\+bottom\+\_\+up}} ()
+\begin{DoxyCompactList}\small\item\em method to solve the problem in bottom up manner. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_n_a_a95934a8d880c45abc3789ccadd69ee54}{find\+\_\+pairings}} (int i, int j)
+\begin{DoxyCompactList}\small\item\em medhod to fond the optimal pairings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_n_a_a14d524af3caa43606de4e1402b19accb}{solve\+\_\+top\+\_\+down}} ()
+\begin{DoxyCompactList}\small\item\em to get the optimal using top down approach. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_n_a_ae1bb767c674e562cada4ab7084d4451f}{find\+\_\+pairings}} ()
+\begin{DoxyCompactList}\small\item\em to get the optimal pairings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_r_n_a_ad5546a4c420c509664849531b74b4a99}\label{class_r_n_a_ad5546a4c420c509664849531b74b4a99}} 
+vector$<$ array$<$ int, 2 $>$ $>$ \mbox{\hyperlink{class_r_n_a_ad5546a4c420c509664849531b74b4a99}{pairs}}
+\begin{DoxyCompactList}\small\item\em to store cached results \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_r_n_a}{R\+NA}} class. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_r_n_a_af54a757b9fbae607dfa82bc2b8e3d1a1}\label{class_r_n_a_af54a757b9fbae607dfa82bc2b8e3d1a1}} 
+\index{RNA@{RNA}!RNA@{RNA}}
+\index{RNA@{RNA}!RNA@{RNA}}
+\doxysubsubsection{\texorpdfstring{RNA()}{RNA()}}
+{\footnotesize\ttfamily R\+N\+A\+::\+R\+NA (\begin{DoxyParamCaption}\item[{string}]{S }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+will store the optimal result. 
+
+Construct a new \mbox{\hyperlink{class_r_n_a}{R\+NA}} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em S} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_n_a_ae1bb767c674e562cada4ab7084d4451f}\label{class_r_n_a_ae1bb767c674e562cada4ab7084d4451f}} 
+\index{RNA@{RNA}!find\_pairings@{find\_pairings}}
+\index{find\_pairings@{find\_pairings}!RNA@{RNA}}
+\doxysubsubsection{\texorpdfstring{find\_pairings()}{find\_pairings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void R\+N\+A\+::find\+\_\+pairings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+to get the optimal pairings. 
+
+\mbox{\Hypertarget{class_r_n_a_a95934a8d880c45abc3789ccadd69ee54}\label{class_r_n_a_a95934a8d880c45abc3789ccadd69ee54}} 
+\index{RNA@{RNA}!find\_pairings@{find\_pairings}}
+\index{find\_pairings@{find\_pairings}!RNA@{RNA}}
+\doxysubsubsection{\texorpdfstring{find\_pairings()}{find\_pairings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void R\+N\+A\+::find\+\_\+pairings (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+medhod to fond the optimal pairings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_r_n_a_a4c99f5f628ec902d395d49716f6f19f3}\label{class_r_n_a_a4c99f5f628ec902d395d49716f6f19f3}} 
+\index{RNA@{RNA}!recurse@{recurse}}
+\index{recurse@{recurse}!RNA@{RNA}}
+\doxysubsubsection{\texorpdfstring{recurse()}{recurse()}}
+{\footnotesize\ttfamily int R\+N\+A\+::recurse (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Will be used in top down dp to calculate result for substring rna(i.......j) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_n_a_af10846d4a7a36b45bc6b09d934882d72}\label{class_r_n_a_af10846d4a7a36b45bc6b09d934882d72}} 
+\index{RNA@{RNA}!solve\_bottom\_up@{solve\_bottom\_up}}
+\index{solve\_bottom\_up@{solve\_bottom\_up}!RNA@{RNA}}
+\doxysubsubsection{\texorpdfstring{solve\_bottom\_up()}{solve\_bottom\_up()}}
+{\footnotesize\ttfamily int R\+N\+A\+::solve\+\_\+bottom\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+method to solve the problem in bottom up manner. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_n_a_a14d524af3caa43606de4e1402b19accb}\label{class_r_n_a_a14d524af3caa43606de4e1402b19accb}} 
+\index{RNA@{RNA}!solve\_top\_down@{solve\_top\_down}}
+\index{solve\_top\_down@{solve\_top\_down}!RNA@{RNA}}
+\doxysubsubsection{\texorpdfstring{solve\_top\_down()}{solve\_top\_down()}}
+{\footnotesize\ttfamily int R\+N\+A\+::solve\+\_\+top\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+to get the optimal using top down approach. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+R\+N\+A.\+hpp\end{DoxyCompactItemize}
