@@ -1,0 +1,10 @@
+8
+14 71
+19 70
+29 69
+34 50
+38 47
+57 68
+59 67
+61 66
+@Calling RNA secondary structure prediction algorithm> 110.473 ms

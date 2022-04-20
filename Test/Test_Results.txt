@@ -1,0 +1,6 @@
+Length of String        Number of Pairs         Time taken(ms)
+19                      4                       100.438
+9                       2                       100.173
+43                      15                      104.425
+6                       0                       100.169
+6                       0                       100.122

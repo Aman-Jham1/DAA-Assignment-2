@@ -1,9 +1,9 @@
 /**
  * @file main.cpp
- * @author Aman Jham
- * @author Jay Patel
- * @author Kruti Baraiya
- * @author Zaeem Ansari
+ * @author Aman Jham - 2019A7PS0071H
+ * @author Jay Patel - 2019A7PS0156H
+ * @author Kruti Baraiya - 2019A7PS1260H
+ * @author Zaeem Ansari - 2019A7PS0057H
  * @brief Given an RNA molecule, predict its secondary structure.
  * @version 0.1
  * @date 2022-04-17
