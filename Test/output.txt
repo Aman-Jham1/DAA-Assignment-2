@@ -1,9 +1,12 @@
-7
-3 25
-4 24
-5 23
-6 22
-9 20
-10 19
-12 17
-@Calling RNA secondary structure prediction algorithm> 100.523 ms
+Total pairs of bases matched : 7
+
+The matched Pairs are : 
+(3 , 25)
+(4 , 24)
+(5 , 23)
+(6 , 22)
+(9 , 20)
+(10 , 19)
+(12 , 17)
+
+@Calling RNA secondary structure prediction algorithm > 103.717 ms

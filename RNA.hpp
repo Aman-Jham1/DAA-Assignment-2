@@ -9,7 +9,6 @@ class RNA {
 private:
     string rna; /// given rna molecule
     int n;      /// length of rna molecule 
-    unordered_map<char, char> match; /// corresponding base pair matching according to given rules.
     vector<vector<int>> dp;   /// to store cached results
 
 public:
@@ -21,11 +20,28 @@ public:
      */
     RNA(string S) : rna(S) {
         n = (int)S.size();
-        match['A'] = 'U';
-        match['U'] = 'A';
-        match['G'] = 'C';
-        match['C'] = 'G';
         dp.assign(n + 1, vector<int>(n + 1, -1));
+    }
+
+    /**
+     * @brief to check if it's a matching base pair.
+     * 
+     * @param i 
+     * @param j 
+     * @return true 
+     * @return false 
+     */
+
+    bool match(int i, int j) {
+        if (rna[i] == 'A' and rna[j] == 'U')
+            return true;
+        if (rna[i] == 'U' and rna[j] == 'A')
+            return true;
+        if (rna[i] == 'C' and rna[j] == 'G')
+            return true;
+        if (rna[i] == 'G' and rna[j] == 'C')
+            return true;
+        return false;
     }
 
     /**
@@ -44,7 +60,7 @@ public:
             return res;
         res = max(recurse(i + 1, j), recurse(i, j - 1));
         for (int t = i + 5; t <= j; ++t) {
-            if (match[rna[i]] == rna[t]) {
+            if (match(i, t)) {
                 res = max(res, 1 + recurse(i + 1, t - 1) + recurse(t + 1, j));
             }
         }
@@ -64,7 +80,7 @@ public:
                     break;
                 dp[i][j] = dp[i + 1][j];
                 for (int t = i + 5; t <= j; ++t) {
-                    if (match[rna[i]] == rna[t]) {
+                    if (match(i, t)) {
                         dp[i][j] = max(dp[i][j], dp[i + 1][t - 1] + 1 + dp[t + 1][j]);
                     }
                 }
@@ -91,7 +107,7 @@ public:
             return;
         }
         for (int t = i + 5; t <= j; ++t) {
-            if (match[rna[i]] == rna[t] and res == 1 + recurse(i + 1, t - 1) + recurse(t + 1, j)) {
+            if (match(i, t) and res == 1 + recurse(i + 1, t - 1) + recurse(t + 1, j)) {
                 pairs.push_back({i, t});
                 find_pairings(i + 1, t - 1);
                 find_pairings(t + 1, j);

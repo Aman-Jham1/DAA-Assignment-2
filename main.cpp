@@ -31,7 +31,7 @@ struct Timer {
     {
         end = high_resolution_clock::now();
         duration = end - start;
-        cout << "@" << name << "> " << duration.count() << " ms" << '\n';
+        cout << "@" << name << " > " << duration.count() << " ms" << '\n';
     }
 };
 
@@ -66,7 +66,7 @@ int32_t main() {
     //int ans_bottom = rna.solve_bottom_up();
     this_thread::sleep_for(chrono::milliseconds(100));
 
-    cout << ans_top << '\n';
+    cout << "Total pairs of bases matched : " << ans_top << '\n' << '\n';
 
     rna.find_pairings();
 
@@ -74,9 +74,16 @@ int32_t main() {
      * @brief Printing the optimal pairs.
      * 
      */
-
+    cout << "The matched Pairs are : " << '\n';
     for (auto i : rna.pairs) {
-        cout << i[0] + 1 << " " << i[1] + 1 << '\n';
+        cout << "(";
+        cout << i[0] + 1;
+        cout << " , ";
+        cout << i[1] + 1 << ")" << '\n';
     }
+    if (ans_top == 0) {
+        cout << "NULL\n";
+    }
+    cout << '\n';
     return 0;
 }
