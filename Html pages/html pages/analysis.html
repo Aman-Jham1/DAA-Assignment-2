@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNA Secondary structure</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">RNA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="algorithm.html">Algorithm</a>
+      <!-- <a class="nav-item nav-link" href="tests.html">Tests</a> -->
+      <a class="nav-item nav-link" href="analysis.html">Analysis</a>
+      <!-- <a class="nav-item nav-link" href="challenges.html">Challenges</a> -->
+      <a class="nav-item nav-link" href="desc.html">Description</a>
+
+    </div>
+  </div>
+</nav>
+    <div class="outer">
+
+    <h3 style="text-align: center">RNA secondary structure prediction algorithm</h3>
+    <br>
+
+    <div class="intro" style="text-align: center">
+        <h4 style="text-align: center"> Timing Analysis</h4>
+    </div>
+    <br>
+    <p style="text-align: center;">Test cases from NDB</p>
+    <br>
+    <table class="table table-sm table-striped">
+        <thead class = "thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Size (n)</th>
+            <th scope="col">No of pairs</th>
+            <th scope="col">Time taken</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>19</td>
+                <td>4</td>
+                <td>100.438 ms</td>
+              </tr>
+          <tr>
+                <th scope="row">2</th>
+                <td>9</td>
+                <td>2</td>
+                <td>100.173 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>43</td>
+            <td>15</td>
+            <td>104.425 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>6</td>
+            <td>0</td>
+            <td> 100.169 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>6</td>
+            <td>0</td>
+            <td>100.122 ms</td>
+          </tr>
+
+          <tr>
+            <th scope="row">6</th>
+            <td>45</td>
+            <td>5</td>
+            <td>106.49 ms</td>
+          </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>80</td>
+            <td>9</td>
+            <td>132.96 ms</td>
+        </tr> 
+        <tr>
+            <th scope="row">8</th>
+            <td>23</td>
+            <td>5</td>
+            <td>100.876 ms</td>
+        </tr>
+        <tr>
+            <th scope="row">9</th>
+            <td>35</td>
+            <td>4</td>
+            <td>103.2 ms</td>
+        </tr>
+        <tr>
+            <th scope="row">10</th>
+            <td>23</td>
+            <td>4</td>
+            <td>102.792 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td>23</td>
+          <td>6</td>
+          <td>101.158 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td>9</td>
+          <td>2</td>
+          <td>100.291 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td>13</td>
+          <td>2</td>
+          <td>100.114 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td>12</td>
+          <td>2</td>
+          <td>100.154 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">15</th>
+          <td>16</td>
+          <td>4</td>
+          <td>100.362 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">16</th>
+          <td>12</td>
+          <td>4</td>
+          <td>100.238 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">17</th>
+          <td>27</td>
+          <td>7</td>
+          <td>101.344 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">18</th>
+          <td>74</td>
+          <td>8</td>
+          <td>112.232 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">19</th>
+          <td>73</td>
+          <td>8</td>
+          <td>110.473 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">20</th>
+          <td>19</td>
+          <td>4</td>
+          <td>100.407 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">21</th>
+          <td>36</td>
+          <td>3</td>
+          <td>101.314 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">22</th>
+          <td>18</td>
+          <td>3</td>
+          <td>100.287 ms</td>
+        </tr>
+        <tr>
+          <th scope="row">23</th>
+          <td>27</td>
+          <td>7</td>
+          <td>100.523 ms</td>
+        </tr>
+        
+        </tbody>
+      </table>
+
+      <br><br>
+      <p style="text-align: center;">Our test cases</p>
+      
+      <table class="table table-sm table-striped">
+        <thead class = "thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Size (n)</th>
+            <th scope="col">No of pairs</th>
+            <th scope="col">Time taken</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>40</td>
+            <td>12</td>
+            <td>103.734 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>50</td>
+            <td>14</td>
+            <td>107.414 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>60</td>
+            <td>18</td>
+            <td>112.187 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>70</td>
+            <td>21</td>
+            <td>118.467 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>80</td>
+            <td>26</td>
+            <td>124.913 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>90</td>
+            <td>29</td>
+            <td>130.064 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>100</td>
+            <td>32</td>
+            <td>143.233 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>200</td>
+            <td>70</td>
+            <td>250.152 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>500</td>
+            <td>175</td>
+            <td>2133.43 ms</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>1000</td>
+            <td>358</td>
+            <td>17117.3 ms</td>
+          </tr>
+  
+
+            
+        
+        </tbody>
+      </table>
+
+    
+
+    
+</div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
