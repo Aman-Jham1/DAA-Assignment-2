@@ -9,4 +9,4 @@ The matched Pairs are :
 (10 , 19)
 (12 , 17)
 
-@Calling RNA secondary structure prediction algorithm > 103.717 ms
+@Calling RNA secondary structure prediction algorithm > 100.481 ms
