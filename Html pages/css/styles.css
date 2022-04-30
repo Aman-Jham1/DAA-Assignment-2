@@ -44,6 +44,10 @@ img{
     float: right
     
 }
+.r1{
+  width: 200%;
+  height: 100%;
+}
 .names{
     padding: 20px;
     display: flex;
